@@ -25,7 +25,7 @@ import (
 	"golang.org/x/tools/go/packages"
 	"golang.org/x/tools/go/ssa"
 	"golang.org/x/tools/go/ssa/ssautil"
-	"golang.org/x/tools/internal/testenv"
+	"golang.org/x/tools/pkg/testenv"
 )
 
 func bytesAllocated() uint64 {

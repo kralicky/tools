@@ -14,7 +14,7 @@ import (
 
 	"golang.org/x/tools/go/analysis/analysistest"
 	"golang.org/x/tools/go/analysis/passes/findcall"
-	"golang.org/x/tools/internal/testenv"
+	"golang.org/x/tools/pkg/testenv"
 )
 
 func init() {

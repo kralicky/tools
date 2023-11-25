@@ -19,7 +19,7 @@ import (
 	"os"
 	"time"
 
-	generator "golang.org/x/tools/cmd/signature-fuzzer/internal/fuzz-generator"
+	generator "golang.org/x/tools/cmd/signature-fuzzer/pkg/fuzz-generator"
 )
 
 // Basic options

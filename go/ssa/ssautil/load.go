@@ -14,8 +14,8 @@ import (
 	"golang.org/x/tools/go/loader"
 	"golang.org/x/tools/go/packages"
 	"golang.org/x/tools/go/ssa"
-	"golang.org/x/tools/internal/typeparams"
-	"golang.org/x/tools/internal/versions"
+	"golang.org/x/tools/pkg/typeparams"
+	"golang.org/x/tools/pkg/versions"
 )
 
 // Packages creates an SSA program for a set of packages.

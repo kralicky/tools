@@ -9,7 +9,7 @@ import (
 
 	"golang.org/x/tools/go/callgraph"
 	"golang.org/x/tools/go/ssa"
-	"golang.org/x/tools/internal/typeparams"
+	"golang.org/x/tools/pkg/typeparams"
 )
 
 func canAlias(n1, n2 node) bool {

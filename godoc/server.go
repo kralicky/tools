@@ -29,7 +29,7 @@ import (
 	"golang.org/x/tools/godoc/analysis"
 	"golang.org/x/tools/godoc/util"
 	"golang.org/x/tools/godoc/vfs"
-	"golang.org/x/tools/internal/typeparams"
+	"golang.org/x/tools/pkg/typeparams"
 )
 
 // handlerServer is a migration from an old godoc http Handler type.

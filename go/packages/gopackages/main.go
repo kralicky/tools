@@ -20,7 +20,7 @@ import (
 
 	"golang.org/x/tools/go/packages"
 	"golang.org/x/tools/go/types/typeutil"
-	"golang.org/x/tools/internal/tool"
+	"golang.org/x/tools/pkg/tool"
 )
 
 func main() {

@@ -13,7 +13,7 @@ import (
 	"testing"
 
 	"golang.org/x/tools/go/ast/astutil"
-	"golang.org/x/tools/internal/typeparams"
+	"golang.org/x/tools/pkg/typeparams"
 )
 
 type rewriteTest struct {

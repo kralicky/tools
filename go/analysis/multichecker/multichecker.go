@@ -16,8 +16,8 @@ import (
 	"strings"
 
 	"golang.org/x/tools/go/analysis"
-	"golang.org/x/tools/go/analysis/internal/analysisflags"
-	"golang.org/x/tools/go/analysis/internal/checker"
+	"golang.org/x/tools/go/analysis/pkg/analysisflags"
+	"golang.org/x/tools/go/analysis/pkg/checker"
 	"golang.org/x/tools/go/analysis/unitchecker"
 )
 

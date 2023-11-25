@@ -13,7 +13,7 @@ import (
 	"golang.org/x/tools/go/callgraph/cha"
 	"golang.org/x/tools/go/ssa"
 	"golang.org/x/tools/go/ssa/ssautil"
-	"golang.org/x/tools/internal/typeparams"
+	"golang.org/x/tools/pkg/typeparams"
 )
 
 func TestVTACallGraph(t *testing.T) {

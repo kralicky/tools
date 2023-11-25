@@ -11,7 +11,7 @@ import (
 	"go/types"
 
 	"golang.org/x/tools/go/types/typeutil"
-	"golang.org/x/tools/internal/typeparams"
+	"golang.org/x/tools/pkg/typeparams"
 )
 
 // MethodValue returns the Function implementing method sel, building

@@ -17,7 +17,7 @@ import (
 	"unicode"
 
 	"golang.org/x/tools/go/analysis"
-	"golang.org/x/tools/go/analysis/passes/internal/analysisutil"
+	"golang.org/x/tools/go/analysis/passes/pkg/analysisutil"
 )
 
 const Doc = "check //go:build and // +build directives"

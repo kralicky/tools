@@ -10,7 +10,7 @@ import (
 	"go/types"
 
 	"golang.org/x/tools/go/analysis"
-	"golang.org/x/tools/internal/typeparams"
+	"golang.org/x/tools/pkg/typeparams"
 )
 
 var errorType = types.Universe.Lookup("error").Type().Underlying().(*types.Interface)

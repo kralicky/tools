@@ -10,8 +10,8 @@ import (
 	"log"
 	"os"
 
-	"golang.org/x/tools/internal/gocommand"
-	intimp "golang.org/x/tools/internal/imports"
+	"golang.org/x/tools/pkg/gocommand"
+	intimp "golang.org/x/tools/pkg/imports"
 )
 
 // Options specifies options for processing files.

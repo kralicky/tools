@@ -18,7 +18,7 @@ import (
 	"os/exec"
 
 	"github.com/google/go-cmp/cmp"
-	"golang.org/x/tools/gopls/internal/settings"
+	"golang.org/x/tools/gopls/pkg/settings"
 )
 
 const usage = `api-diff <previous version> [<current version>]

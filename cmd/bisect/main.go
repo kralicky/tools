@@ -145,7 +145,7 @@ import (
 	"strings"
 	"time"
 
-	"golang.org/x/tools/internal/bisect"
+	"golang.org/x/tools/pkg/bisect"
 )
 
 // Preserve import of bisect, to allow [bisect.Match] in the doc comment.

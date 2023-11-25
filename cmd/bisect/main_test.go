@@ -16,9 +16,9 @@ import (
 	"strings"
 	"testing"
 
-	"golang.org/x/tools/internal/bisect"
-	"golang.org/x/tools/internal/compat"
-	"golang.org/x/tools/internal/diffp"
+	"golang.org/x/tools/pkg/bisect"
+	"golang.org/x/tools/pkg/compat"
+	"golang.org/x/tools/pkg/diffp"
 	"golang.org/x/tools/txtar"
 )
 

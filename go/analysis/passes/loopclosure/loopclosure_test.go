@@ -12,8 +12,8 @@ import (
 	"golang.org/x/tools/go/analysis"
 	"golang.org/x/tools/go/analysis/analysistest"
 	"golang.org/x/tools/go/analysis/passes/loopclosure"
-	"golang.org/x/tools/internal/testenv"
-	"golang.org/x/tools/internal/typeparams"
+	"golang.org/x/tools/pkg/testenv"
+	"golang.org/x/tools/pkg/typeparams"
 	"golang.org/x/tools/txtar"
 )
 

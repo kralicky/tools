@@ -14,7 +14,7 @@ import (
 	"strconv"
 	"strings"
 
-	"golang.org/x/tools/internal/typeparams"
+	"golang.org/x/tools/pkg/typeparams"
 )
 
 // NewConst returns a new constant of the specified value and type.

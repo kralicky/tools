@@ -18,7 +18,7 @@ import (
 	"golang.org/x/tools/go/expect"
 	"golang.org/x/tools/go/ssa"
 	"golang.org/x/tools/go/ssa/ssautil"
-	"golang.org/x/tools/internal/testenv"
+	"golang.org/x/tools/pkg/testenv"
 )
 
 // TestMultipleGoversions tests that globals initialized to equivalent

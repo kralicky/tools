@@ -23,7 +23,7 @@ import (
 	"strconv"
 	"strings"
 
-	"golang.org/x/tools/go/internal/gccgoimporter"
+	"golang.org/x/tools/go/pkg/gccgoimporter"
 )
 
 // CompilerInfo executes the specified gccgo compiler and returns

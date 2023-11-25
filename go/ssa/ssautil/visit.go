@@ -9,7 +9,7 @@ import (
 	"go/types"
 
 	"golang.org/x/tools/go/ssa"
-	"golang.org/x/tools/internal/typeparams"
+	"golang.org/x/tools/pkg/typeparams"
 
 	_ "unsafe" // for linkname hack
 )

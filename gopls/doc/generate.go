@@ -32,12 +32,12 @@ import (
 	"github.com/jba/printsrc"
 	"golang.org/x/tools/go/ast/astutil"
 	"golang.org/x/tools/go/packages"
-	"golang.org/x/tools/gopls/internal/lsp/command"
-	"golang.org/x/tools/gopls/internal/lsp/command/commandmeta"
-	"golang.org/x/tools/gopls/internal/lsp/mod"
-	"golang.org/x/tools/gopls/internal/lsp/safetoken"
-	"golang.org/x/tools/gopls/internal/lsp/source"
-	"golang.org/x/tools/gopls/internal/settings"
+	"golang.org/x/tools/gopls/pkg/lsp/command"
+	"golang.org/x/tools/gopls/pkg/lsp/command/commandmeta"
+	"golang.org/x/tools/gopls/pkg/lsp/mod"
+	"golang.org/x/tools/gopls/pkg/lsp/safetoken"
+	"golang.org/x/tools/gopls/pkg/lsp/source"
+	"golang.org/x/tools/gopls/pkg/settings"
 )
 
 func main() {

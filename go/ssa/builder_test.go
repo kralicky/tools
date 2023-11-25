@@ -25,8 +25,8 @@ import (
 	"golang.org/x/tools/go/packages"
 	"golang.org/x/tools/go/ssa"
 	"golang.org/x/tools/go/ssa/ssautil"
-	"golang.org/x/tools/internal/testenv"
-	"golang.org/x/tools/internal/typeparams"
+	"golang.org/x/tools/pkg/testenv"
+	"golang.org/x/tools/pkg/typeparams"
 	"golang.org/x/tools/txtar"
 )
 

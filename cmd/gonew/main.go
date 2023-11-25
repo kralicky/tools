@@ -50,7 +50,7 @@ import (
 
 	"golang.org/x/mod/modfile"
 	"golang.org/x/mod/module"
-	"golang.org/x/tools/internal/edit"
+	"golang.org/x/tools/pkg/edit"
 )
 
 func usage() {

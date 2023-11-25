@@ -7,7 +7,7 @@ package nilfunc_test
 import (
 	"golang.org/x/tools/go/analysis/analysistest"
 	"golang.org/x/tools/go/analysis/passes/nilfunc"
-	"golang.org/x/tools/internal/typeparams"
+	"golang.org/x/tools/pkg/typeparams"
 	"testing"
 )
 
