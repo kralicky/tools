@@ -42,7 +42,7 @@ type Server interface {
 	Completion(context.Context, *CompletionParams) (*CompletionList, error)                                      // textDocument/completion
 	Declaration(context.Context, *DeclarationParams) (*Or_textDocument_declaration, error)                       // textDocument/declaration
 	Definition(context.Context, *DefinitionParams) ([]Location, error)                                           // textDocument/definition
-	Diagnostic(context.Context, *string) (*string, error)                                                        // textDocument/diagnostic
+	Diagnostic(context.Context, *DocumentDiagnosticParams) (*DocumentDiagnosticReport, error)                    // textDocument/diagnostic
 	DidChange(context.Context, *DidChangeTextDocumentParams) error                                               // textDocument/didChange
 	DidClose(context.Context, *DidCloseTextDocumentParams) error                                                 // textDocument/didClose
 	DidOpen(context.Context, *DidOpenTextDocumentParams) error                                                   // textDocument/didOpen
@@ -299,7 +299,7 @@ func serverDispatch(ctx context.Context, server Server, reply jsonrpc2.Replier, 
 		}
 		return true, reply(ctx, resp, nil)
 	case "textDocument/diagnostic":
-		var params string
+		var params DocumentDiagnosticParams
 		if err := json.Unmarshal(r.Params(), &params); err != nil {
 			return true, sendParseError(ctx, reply, err)
 		}
@@ -892,8 +892,8 @@ func (s *serverDispatcher) Definition(ctx context.Context, params *DefinitionPar
 	}
 	return result, nil
 }
-func (s *serverDispatcher) Diagnostic(ctx context.Context, params *string) (*string, error) {
-	var result *string
+func (s *serverDispatcher) Diagnostic(ctx context.Context, params *DocumentDiagnosticParams) (*DocumentDiagnosticReport, error) {
+	var result *DocumentDiagnosticReport
 	if err := s.sender.Call(ctx, "textDocument/diagnostic", params, &result); err != nil {
 		return nil, err
 	}

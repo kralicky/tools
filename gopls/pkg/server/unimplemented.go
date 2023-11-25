@@ -22,7 +22,7 @@ func (s *server) Declaration(context.Context, *protocol.DeclarationParams) (*pro
 	return nil, notImplemented("Declaration")
 }
 
-func (s *server) Diagnostic(context.Context, *string) (*string, error) {
+func (s *server) Diagnostic(context.Context, *protocol.DocumentDiagnosticParams) (*protocol.DocumentDiagnosticReport, error) {
 	return nil, notImplemented("Diagnostic")
 }
 

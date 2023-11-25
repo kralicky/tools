@@ -1463,7 +1463,15 @@ type DocumentDiagnosticParams struct {
 	WorkDoneProgressParams
 	PartialResultParams
 }
-type DocumentDiagnosticReport = Or_DocumentDiagnosticReport // (alias)
+
+// The result of a document diagnostic pull request. A report can
+// either be a full report containing all diagnostics for the
+// requested document or an unchanged report indicating that nothing
+// has changed in terms of diagnostics in comparison to the last
+// pull request.
+//
+// @since 3.17.0
+type DocumentDiagnosticReport = Or_DocumentDiagnosticReport // (alias) line 14298
 // The document diagnostic report kinds.
 //
 // @since 3.17.0
