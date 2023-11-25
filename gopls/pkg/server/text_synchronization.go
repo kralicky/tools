@@ -181,7 +181,7 @@ func (s *server) DidChangeWatchedFiles(ctx context.Context, params *protocol.Did
 
 	var modifications []file.Modification
 	for _, change := range params.Changes {
-		action := changeTypeToFileAction(change.Type)
+		action := ChangeTypeToFileAction(change.Type)
 		modifications = append(modifications, file.Modification{
 			URI:    change.URI,
 			Action: action,
@@ -333,7 +333,7 @@ func (s *server) applyIncrementalChanges(ctx context.Context, uri protocol.Docum
 	return content, nil
 }
 
-func changeTypeToFileAction(ct protocol.FileChangeType) file.Action {
+func ChangeTypeToFileAction(ct protocol.FileChangeType) file.Action {
 	switch ct {
 	case protocol.Changed:
 		return file.Change

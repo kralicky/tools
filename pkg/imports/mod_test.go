@@ -909,7 +909,7 @@ func (t *modTest) assertFound(importPath, pkgName string) (string, *pkg) {
 	}
 	pkg := t.assertScanFinds(importPath, pkgName)
 
-	_, foundDir := t.resolver.findPackage(importPath)
+	_, foundDir := t.resolver.FindPackage(importPath)
 	return foundDir, pkg
 }
 
@@ -1183,7 +1183,7 @@ import _ "rsc.io/quote"
 	want := filepath.Join(mt.gopath, "pkg/mod", "rsc.io/quote@v1.5.2")
 
 	found := mt.assertScanFinds("rsc.io/quote", "quote")
-	modDir, _ := mt.resolver.modInfo(found.dir)
+	modDir, _ := mt.resolver.ModInfo(found.dir)
 	if modDir != want {
 		t.Errorf("expected: %s, got: %s", want, modDir)
 	}

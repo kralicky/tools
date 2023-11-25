@@ -79,7 +79,7 @@ type View struct {
 	parseCache *parseCache
 
 	// fs is the file source used to populate this view.
-	fs *overlayFS
+	fs *OverlayFS
 
 	// knownFiles tracks files that the view has accessed.
 	// TODO(golang/go#57558): this notion is fundamentally problematic, and

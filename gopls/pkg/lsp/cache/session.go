@@ -43,7 +43,7 @@ type Session struct {
 
 	parseCache *parseCache
 
-	*overlayFS
+	*OverlayFS
 }
 
 // ID returns the unique identifier for this session on this server.
@@ -174,7 +174,7 @@ func (s *Session) createView(ctx context.Context, def *viewDefinition, folder *F
 		baseCtx:              baseCtx,
 		parseCache:           s.parseCache,
 		ignoreFilter:         ignoreFilter,
-		fs:                   s.overlayFS,
+		fs:                   s.OverlayFS,
 		viewDefinition:       def,
 		importsState: &importsState{
 			ctx: backgroundCtx,
@@ -428,7 +428,7 @@ func (s *Session) DidModifyFiles(ctx context.Context, changes []file.Modificatio
 	// spurious diagnostics). However, any such view would immediately be
 	// invalidated here, so it is possible that we could update overlays before
 	// acquiring viewMu.
-	if err := s.updateOverlays(ctx, changes); err != nil {
+	if err := s.UpdateOverlays(ctx, changes); err != nil {
 		return nil, nil, err
 	}
 
@@ -610,7 +610,7 @@ func (s *Session) ExpandModificationsToDirectories(ctx context.Context, changes 
 
 // Precondition: caller holds s.viewMu lock.
 // TODO(rfindley): move this to fs_overlay.go.
-func (fs *overlayFS) updateOverlays(ctx context.Context, changes []file.Modification) error {
+func (fs *OverlayFS) UpdateOverlays(ctx context.Context, changes []file.Modification) error {
 	fs.mu.Lock()
 	defer fs.mu.Unlock()
 

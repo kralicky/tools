@@ -12,24 +12,24 @@ import (
 	"golang.org/x/tools/gopls/pkg/lsp/protocol"
 )
 
-// An overlayFS is a file.Source that keeps track of overlays on top of a
+// An OverlayFS is a file.Source that keeps track of overlays on top of a
 // delegate FileSource.
-type overlayFS struct {
+type OverlayFS struct {
 	delegate file.Source
 
 	mu       sync.Mutex
 	overlays map[protocol.DocumentURI]*Overlay
 }
 
-func newOverlayFS(delegate file.Source) *overlayFS {
-	return &overlayFS{
+func NewOverlayFS(delegate file.Source) *OverlayFS {
+	return &OverlayFS{
 		delegate: delegate,
 		overlays: make(map[protocol.DocumentURI]*Overlay),
 	}
 }
 
 // Overlays returns a new unordered array of overlays.
-func (fs *overlayFS) Overlays() []*Overlay {
+func (fs *OverlayFS) Overlays() []*Overlay {
 	fs.mu.Lock()
 	defer fs.mu.Unlock()
 	overlays := make([]*Overlay, 0, len(fs.overlays))
@@ -39,7 +39,7 @@ func (fs *overlayFS) Overlays() []*Overlay {
 	return overlays
 }
 
-func (fs *overlayFS) ReadFile(ctx context.Context, uri protocol.DocumentURI) (file.Handle, error) {
+func (fs *OverlayFS) ReadFile(ctx context.Context, uri protocol.DocumentURI) (file.Handle, error) {
 	fs.mu.Lock()
 	overlay, ok := fs.overlays[uri]
 	fs.mu.Unlock()

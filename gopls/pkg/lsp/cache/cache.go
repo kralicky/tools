@@ -33,7 +33,7 @@ func New(store *memoize.Store) *Cache {
 	c := &Cache{
 		id:         strconv.FormatInt(index, 10),
 		store:      store,
-		memoizedFS: &memoizedFS{filesByID: map[robustio.FileID][]*DiskFile{}},
+		MemoizedFS: &MemoizedFS{filesByID: map[robustio.FileID][]*DiskFile{}},
 	}
 	return c
 }
@@ -47,7 +47,7 @@ type Cache struct {
 
 	store *memoize.Store
 
-	*memoizedFS // implements source.FileSource
+	*MemoizedFS // implements source.FileSource
 }
 
 // NewSession creates a new gopls session with the given cache and options overrides.
@@ -61,7 +61,7 @@ func NewSession(ctx context.Context, c *Cache) *Session {
 		id:          strconv.FormatInt(index, 10),
 		cache:       c,
 		gocmdRunner: &gocommand.Runner{},
-		overlayFS:   newOverlayFS(c),
+		OverlayFS:   NewOverlayFS(c),
 		parseCache:  newParseCache(1 * time.Minute), // keep recently parsed files for a minute, to optimize typing CPU
 	}
 	event.Log(ctx, "New session", KeyCreateSession.Of(s))
