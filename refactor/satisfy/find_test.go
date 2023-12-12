@@ -15,8 +15,8 @@ import (
 	"sort"
 	"testing"
 
-	"golang.org/x/tools/internal/typeparams"
-	"golang.org/x/tools/internal/versions"
+	"golang.org/x/tools/pkg/typeparams"
+	"golang.org/x/tools/pkg/versions"
 	"golang.org/x/tools/refactor/satisfy"
 )
 

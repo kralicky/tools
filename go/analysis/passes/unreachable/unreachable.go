@@ -14,7 +14,7 @@ import (
 
 	"golang.org/x/tools/go/analysis"
 	"golang.org/x/tools/go/analysis/passes/inspect"
-	"golang.org/x/tools/go/analysis/passes/internal/analysisutil"
+	"golang.org/x/tools/go/analysis/passes/pkg/analysisutil"
 	"golang.org/x/tools/go/ast/inspector"
 )
 

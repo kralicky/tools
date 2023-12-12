@@ -19,7 +19,7 @@ import (
 	"testing"
 
 	"golang.org/x/tools/go/ast/astutil"
-	"golang.org/x/tools/internal/typeparams"
+	"golang.org/x/tools/pkg/typeparams"
 )
 
 // pathToString returns a string containing the concrete types of the

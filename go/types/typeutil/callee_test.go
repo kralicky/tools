@@ -14,8 +14,8 @@ import (
 	"testing"
 
 	"golang.org/x/tools/go/types/typeutil"
-	"golang.org/x/tools/internal/typeparams"
-	"golang.org/x/tools/internal/versions"
+	"golang.org/x/tools/pkg/typeparams"
+	"golang.org/x/tools/pkg/versions"
 )
 
 func TestStaticCallee(t *testing.T) {

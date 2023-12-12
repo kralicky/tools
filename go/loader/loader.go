@@ -22,9 +22,9 @@ import (
 	"time"
 
 	"golang.org/x/tools/go/ast/astutil"
-	"golang.org/x/tools/go/internal/cgo"
-	"golang.org/x/tools/internal/typeparams"
-	"golang.org/x/tools/internal/versions"
+	"golang.org/x/tools/go/pkg/cgo"
+	"golang.org/x/tools/pkg/typeparams"
+	"golang.org/x/tools/pkg/versions"
 )
 
 var ignoreVendor build.ImportMode

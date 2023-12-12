@@ -17,7 +17,7 @@ import (
 	"strings"
 
 	"golang.org/x/tools/go/types/typeutil"
-	"golang.org/x/tools/internal/typeparams"
+	"golang.org/x/tools/pkg/typeparams"
 )
 
 // relName returns the name of v relative to i.

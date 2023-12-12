@@ -15,8 +15,8 @@ import (
 	"os"
 	"sync"
 
-	"golang.org/x/tools/internal/typeparams"
-	"golang.org/x/tools/internal/versions"
+	"golang.org/x/tools/pkg/typeparams"
+	"golang.org/x/tools/pkg/versions"
 )
 
 // NewProgram returns a new SSA Program.

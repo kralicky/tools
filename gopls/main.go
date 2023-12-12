@@ -18,9 +18,9 @@ import (
 	"os"
 
 	"golang.org/x/telemetry/counter"
-	"golang.org/x/tools/gopls/internal/cmd"
-	"golang.org/x/tools/gopls/internal/hooks"
-	"golang.org/x/tools/internal/tool"
+	"golang.org/x/tools/gopls/pkg/cmd"
+	"golang.org/x/tools/gopls/pkg/hooks"
+	"golang.org/x/tools/pkg/tool"
 )
 
 func main() {

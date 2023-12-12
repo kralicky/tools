@@ -13,8 +13,8 @@ import (
 	"regexp"
 	"strings"
 
-	"golang.org/x/tools/internal/gocommand"
-	"golang.org/x/tools/internal/proxydir"
+	"golang.org/x/tools/pkg/gocommand"
+	"golang.org/x/tools/pkg/proxydir"
 )
 
 // Modules is the exporter that produces module layouts.

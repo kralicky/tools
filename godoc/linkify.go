@@ -18,7 +18,7 @@ import (
 	"io"
 	"strconv"
 
-	"golang.org/x/tools/internal/typeparams"
+	"golang.org/x/tools/pkg/typeparams"
 )
 
 // LinkifyText HTML-escapes source text and writes it to w.

@@ -17,7 +17,7 @@ import (
 	"strings"
 	"testing"
 
-	"golang.org/x/tools/internal/testenv"
+	"golang.org/x/tools/pkg/testenv"
 	"golang.org/x/tools/txtar"
 )
 

@@ -18,7 +18,7 @@ import (
 	"testing"
 
 	"golang.org/x/tools/go/buildutil"
-	"golang.org/x/tools/internal/testenv"
+	"golang.org/x/tools/pkg/testenv"
 )
 
 // TODO(adonovan): test reported source positions, somehow.

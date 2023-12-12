@@ -32,12 +32,12 @@ import (
 	"github.com/jba/printsrc"
 	"golang.org/x/tools/go/ast/astutil"
 	"golang.org/x/tools/go/packages"
-	"golang.org/x/tools/gopls/internal/lsp/command"
-	"golang.org/x/tools/gopls/internal/lsp/command/commandmeta"
-	"golang.org/x/tools/gopls/internal/lsp/source"
-	"golang.org/x/tools/gopls/internal/mod"
-	"golang.org/x/tools/gopls/internal/settings"
-	"golang.org/x/tools/gopls/internal/util/safetoken"
+	"golang.org/x/tools/gopls/pkg/lsp/command"
+	"golang.org/x/tools/gopls/pkg/lsp/command/commandmeta"
+	"golang.org/x/tools/gopls/pkg/lsp/source"
+	"golang.org/x/tools/gopls/pkg/mod"
+	"golang.org/x/tools/gopls/pkg/settings"
+	"golang.org/x/tools/gopls/pkg/util/safetoken"
 )
 
 func main() {
@@ -101,7 +101,7 @@ func loadAPI() (*settings.APIJSON, error) {
 		&packages.Config{
 			Mode: packages.NeedTypes | packages.NeedTypesInfo | packages.NeedSyntax | packages.NeedDeps,
 		},
-		"golang.org/x/tools/gopls/internal/settings",
+		"golang.org/x/tools/gopls/pkg/settings",
 	)
 	if err != nil {
 		return nil, err

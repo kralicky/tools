@@ -48,10 +48,10 @@ import (
 	"time"
 
 	"golang.org/x/tools/go/analysis"
-	"golang.org/x/tools/go/analysis/internal/analysisflags"
-	"golang.org/x/tools/internal/facts"
-	"golang.org/x/tools/internal/typeparams"
-	"golang.org/x/tools/internal/versions"
+	"golang.org/x/tools/go/analysis/pkg/analysisflags"
+	"golang.org/x/tools/pkg/facts"
+	"golang.org/x/tools/pkg/typeparams"
+	"golang.org/x/tools/pkg/versions"
 )
 
 // A Config describes a compilation unit to be analyzed.

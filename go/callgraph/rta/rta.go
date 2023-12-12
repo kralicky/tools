@@ -45,7 +45,7 @@ import (
 	"golang.org/x/tools/go/callgraph"
 	"golang.org/x/tools/go/ssa"
 	"golang.org/x/tools/go/types/typeutil"
-	"golang.org/x/tools/internal/compat"
+	"golang.org/x/tools/pkg/compat"
 )
 
 // A Result holds the results of Rapid Type Analysis, which includes the

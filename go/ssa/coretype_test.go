@@ -11,7 +11,7 @@ import (
 	"go/types"
 	"testing"
 
-	"golang.org/x/tools/internal/typeparams"
+	"golang.org/x/tools/pkg/typeparams"
 )
 
 func TestCoreType(t *testing.T) {

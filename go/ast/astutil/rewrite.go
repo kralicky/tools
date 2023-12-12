@@ -10,7 +10,7 @@ import (
 	"reflect"
 	"sort"
 
-	"golang.org/x/tools/internal/typeparams"
+	"golang.org/x/tools/pkg/typeparams"
 )
 
 // An ApplyFunc is invoked by Apply for each node n, even if n is nil,

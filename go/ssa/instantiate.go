@@ -9,7 +9,7 @@ import (
 	"go/types"
 	"sync"
 
-	"golang.org/x/tools/internal/typeparams"
+	"golang.org/x/tools/pkg/typeparams"
 )
 
 // A generic records information about a generic origin function,

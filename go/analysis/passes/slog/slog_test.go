@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	"golang.org/x/tools/go/analysis/analysistest"
-	"golang.org/x/tools/internal/testenv"
+	"golang.org/x/tools/pkg/testenv"
 )
 
 func Test(t *testing.T) {
